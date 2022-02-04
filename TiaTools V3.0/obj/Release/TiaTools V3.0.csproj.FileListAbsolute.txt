@@ -1,0 +1,47 @@
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe.config
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.pdb
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TopSharpLib_NetFramework.dll
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TopSharpLib_NetFramework.pdb
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.AssemblyReference.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_IO.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Main.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_Messages.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Properties.Resources.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.GenerateResource.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.CoreCompileInputs.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.CopyComplete
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.exe
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.pdb
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_ReportManager.resources
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe.config
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.pdb
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\bin\Release\TopSharpLib_NetFramework.pdb
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.AssemblyReference.cache
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_IO.resources
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Main.resources
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_Messages.resources
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_ReportManager.resources
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Properties.Resources.resources
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.GenerateResource.cache
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.CoreCompileInputs.cache
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.CopyComplete
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.exe
+C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.pdb
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe.config
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.pdb
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TopSharpLib_NetFramework.pdb
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.AssemblyReference.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.SuggestedBindingRedirects.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_IO.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Main.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_Messages.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_ReportManager.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Properties.Resources.resources
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.GenerateResource.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.CoreCompileInputs.cache
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.CopyComplete
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.exe
+C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.pdb
