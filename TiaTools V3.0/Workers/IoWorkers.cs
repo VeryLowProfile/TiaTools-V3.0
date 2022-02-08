@@ -31,7 +31,7 @@ namespace TiaTools_V3._0.Workers
                     {                       
                         if (row["Instance Name"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["PLC Tag"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
                             streamWriter.WriteLine($"	\"{row["Instance Name"]}\"(Signal:= \"{row["PLC Tag"]}\",");
                             streamWriter.WriteLine($"	                     LenguageNb:= $LengugeNB$);");
@@ -77,7 +77,7 @@ namespace TiaTools_V3._0.Workers
                     {
                         if (row["Instance Name"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["PLC Tag"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
                             streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Address := '{row["PLC Tag"]}';");
                             if (row["Safe"].ToString() == "YES")
@@ -142,7 +142,23 @@ namespace TiaTools_V3._0.Workers
                             streamWriter.WriteLine(@"""FB_DI""");
                             streamWriter.WriteLine();
                             streamWriter.WriteLine(@"BEGIN");
+
+                            if (row["Safe"].ToString() == "YES")
+                            {
+                                streamWriter.WriteLine($"CONFIG.IsSafety := true;");
+                            } else {
+                                streamWriter.WriteLine($"CONFIG.IsSafety := false;");
+                            }
+
+                            streamWriter.WriteLine($"CONFIG.DebounceTime := T#0ms;");
+                            streamWriter.WriteLine($"CONFIG.Name_IT := '{row["HMI Name IT"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_EN := '{row["HMI Name EN"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_FR := '{row["HMI Name FR"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_DE := '{row["HMI Name DE"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_ES := '{row["HMI Name ES"]}'");
+                            streamWriter.WriteLine($"CONFIG.Address := '{row["Address"]}'");
                             streamWriter.WriteLine();
+
                             streamWriter.WriteLine(@"END_DATA_BLOCK");
                             streamWriter.WriteLine();
                         }
@@ -184,7 +200,7 @@ namespace TiaTools_V3._0.Workers
                     {
                         if (row["Instance Name"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["PLC Tag"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
                             streamWriter.WriteLine($"	\"{row["Instance Name"]}\"(Signal:= \"{row["PLC Tag"]}\",");
                             streamWriter.WriteLine($"	                     LenguageNb:= $LengugeNB$);");
@@ -230,7 +246,7 @@ namespace TiaTools_V3._0.Workers
                     {
                         if (row["Instance Name"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["PLC Tag"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
                             streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Address := '{row["PLC Tag"]}';");
                             if (row["Safe"].ToString() == "YES")
@@ -295,7 +311,26 @@ namespace TiaTools_V3._0.Workers
                             streamWriter.WriteLine(@"""FB_DQ""");
                             streamWriter.WriteLine();
                             streamWriter.WriteLine(@"BEGIN");
+
+                            if (row["Safe"].ToString() == "YES")
+                            {
+                                streamWriter.WriteLine($"CONFIG.IsSafety := true;");
+                            }
+                            else
+                            {
+                                streamWriter.WriteLine($"CONFIG.IsSafety := false;");
+                            }
+
+                            streamWriter.WriteLine($"CONFIG.OnDelay := T#0ms;");
+                            streamWriter.WriteLine($"CONFIG.OFFDelay := T#0ms;");
+                            streamWriter.WriteLine($"CONFIG.Name_IT := '{row["HMI Name IT"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_EN := '{row["HMI Name EN"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_FR := '{row["HMI Name FR"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_DE := '{row["HMI Name DE"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_ES := '{row["HMI Name ES"]}'");
+                            streamWriter.WriteLine($"CONFIG.Address := '{row["Address"]}'");                            
                             streamWriter.WriteLine();
+
                             streamWriter.WriteLine(@"END_DATA_BLOCK");
                             streamWriter.WriteLine();
                         }
