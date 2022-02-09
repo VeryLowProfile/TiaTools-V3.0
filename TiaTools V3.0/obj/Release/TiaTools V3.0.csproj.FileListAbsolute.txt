@@ -32,7 +32,6 @@ C:\Users\Enrico\Desktop\SQL Update\TiaTools V3.0\TiaTools V3.0\TiaTools V3.0\obj
 C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe.config
 C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.exe
 C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TiaTools V3.0.pdb
-C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\bin\Release\TopSharpLib_NetFramework.pdb
 C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.AssemblyReference.cache
 C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools V3.0.csproj.SuggestedBindingRedirects.cache
 C:\Progetti\VisualStudio\Develop\TiaTools V3.0\TiaTools V3.0\obj\Release\TiaTools_V3._0.Forms.Form_IO.resources

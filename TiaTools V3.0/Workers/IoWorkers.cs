@@ -27,13 +27,13 @@ namespace TiaTools_V3._0.Workers
                 //Body
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if ((row["Address"].ToString().Contains("%I") && !row["Address"].ToString().Contains("W")))
+                    if (row["IO-TYPE"].ToString().Contains("DI") && !row["SKIP"].ToString().Contains("YES"))
                     {                       
-                        if (row["Instance Name"].ToString() != "")
+                        if (row["INSTANCE NAME"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["ADDRESS"]} {row["INSTANCE NAME"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
-                            streamWriter.WriteLine($"	\"{row["Instance Name"]}\"(Signal:= \"{row["PLC Tag"]}\",");
+                            streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\"(Signal:= \"{row["PLC TAG"]}\",");
                             streamWriter.WriteLine($"	                     LenguageNb:= $LengugeNB$);");
                             streamWriter.WriteLine();
                         }
@@ -73,36 +73,36 @@ namespace TiaTools_V3._0.Workers
                 //Body
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if ((row["Address"].ToString().Contains("%I") && !row["Address"].ToString().Contains("W")))
+                    if (row["IO-TYPE"].ToString().Contains("DI") && !row["SKIP"].ToString().Contains("YES"))
                     {
-                        if (row["Instance Name"].ToString() != "")
+                        if (row["INSTANCE NAME"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["ADDRESS"]} {row["INSTANCE NAME"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
-                            streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Address := '{row["PLC Tag"]}';");
-                            if (row["Safe"].ToString() == "YES")
+                            streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Address := '{row["ADDRESS"]}';");
+                            if (row["FILE SAFE"].ToString() == "F")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.IsSafety := 1;");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.IsSafety := 1;");
                             }
                             if (row["HMI Name IT"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_IT := '{row["HMI Name IT"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_IT := '{row["HMI Name IT"]}';");
                             }
                             if (row["HMI Name EN"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_EN := '{row["HMI Name EN"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_EN := '{row["HMI Name EN"]}';");
                             }
                             if (row["HMI Name FR"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_FR := '{row["HMI Name FR"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_FR := '{row["HMI Name FR"]}';");
                             }
                             if (row["HMI Name DE"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_DE := '{row["HMI Name DE"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_DE := '{row["HMI Name DE"]}';");
                             }
                             if (row["HMI Name ES"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_ES := '{row["HMI Name ES"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_ES := '{row["HMI Name ES"]}';");
                             }
                             streamWriter.WriteLine();
                         }
@@ -131,11 +131,11 @@ namespace TiaTools_V3._0.Workers
                 //Body
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if ((row["Address"].ToString().Contains("%I") && !row["Address"].ToString().Contains("W")))
+                    if (row["IO-TYPE"].ToString().Contains("DI") && !row["SKIP"].ToString().Contains("YES"))
                     {
-                        if (row["Instance Name"].ToString() != "")
+                        if (row["INSTANCE NAME"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"DATA_BLOCK \"{row["Instance Name"]}\"");
+                            streamWriter.WriteLine($"DATA_BLOCK \"{row["INSTANCE NAME"]}\"");
                             streamWriter.WriteLine(@"{ S7_Optimized_Access := 'TRUE' }");
                             streamWriter.WriteLine(@"VERSION : 0.1");
                             streamWriter.WriteLine(@"NON_RETAIN");
@@ -143,7 +143,7 @@ namespace TiaTools_V3._0.Workers
                             streamWriter.WriteLine();
                             streamWriter.WriteLine(@"BEGIN");
 
-                            if (row["Safe"].ToString() == "YES")
+                            if (row["FILE SAFE"].ToString() == "F")
                             {
                                 streamWriter.WriteLine($"CONFIG.IsSafety := true;");
                             } else {
@@ -151,12 +151,12 @@ namespace TiaTools_V3._0.Workers
                             }
 
                             streamWriter.WriteLine($"CONFIG.DebounceTime := T#0ms;");
-                            streamWriter.WriteLine($"CONFIG.Name_IT := '{row["HMI Name IT"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_EN := '{row["HMI Name EN"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_FR := '{row["HMI Name FR"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_DE := '{row["HMI Name DE"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_ES := '{row["HMI Name ES"]}'");
-                            streamWriter.WriteLine($"CONFIG.Address := '{row["Address"]}'");
+                            streamWriter.WriteLine($"CONFIG.Name_IT := '{row["HMI Name IT"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_EN := '{row["HMI Name EN"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_FR := '{row["HMI Name FR"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_DE := '{row["HMI Name DE"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_ES := '{row["HMI Name ES"]}';");
+                            streamWriter.WriteLine($"CONFIG.Address := '{row["ADDRESS"]}';");
                             streamWriter.WriteLine();
 
                             streamWriter.WriteLine(@"END_DATA_BLOCK");
@@ -196,13 +196,13 @@ namespace TiaTools_V3._0.Workers
                 //Body
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if ((row["Address"].ToString().Contains("%Q") && !row["Address"].ToString().Contains("W")))
+                    if (row["IO-TYPE"].ToString().Contains("DQ") && !row["SKIP"].ToString().Contains("YES"))
                     {
-                        if (row["Instance Name"].ToString() != "")
+                        if (row["INSTANCE NAME"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["ADDRESS"]} {row["INSTANCE NAME"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
-                            streamWriter.WriteLine($"	\"{row["Instance Name"]}\"(Signal:= \"{row["PLC Tag"]}\",");
+                            streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\"(Signal:= \"{row["PLC TAG"]}\",");
                             streamWriter.WriteLine($"	                     LenguageNb:= $LengugeNB$);");
                             streamWriter.WriteLine();
                         }
@@ -242,36 +242,36 @@ namespace TiaTools_V3._0.Workers
                 //Body
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if ((row["Address"].ToString().Contains("%Q") && !row["Address"].ToString().Contains("W")))
+                    if (row["IO-TYPE"].ToString().Contains("DQ") && !row["SKIP"].ToString().Contains("YES"))
                     {
-                        if (row["Instance Name"].ToString() != "")
+                        if (row["INSTANCE NAME"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"	//{row["Address"]} {row["Instance Name"]}");
+                            streamWriter.WriteLine($"	//{row["ADDRESS"]} {row["INSTANCE NAME"]}");
                             streamWriter.WriteLine(@"	//********************************************************************//");
-                            streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Address := '{row["PLC Tag"]}';");
-                            if (row["Safe"].ToString() == "YES")
+                            streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Address := '{row["ADDRESS"]}';");
+                            if (row["FILE SAFE"].ToString() == "F")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.IsSafety := 1;");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.IsSafety := 1;");
                             }
                             if (row["HMI Name IT"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_IT := '{row["HMI Name IT"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_IT := '{row["HMI Name IT"]}';");
                             }
                             if (row["HMI Name EN"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_EN := '{row["HMI Name EN"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_EN := '{row["HMI Name EN"]}';");
                             }
                             if (row["HMI Name FR"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_FR := '{row["HMI Name FR"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_FR := '{row["HMI Name FR"]}';");
                             }
                             if (row["HMI Name DE"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_DE := '{row["HMI Name DE"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_DE := '{row["HMI Name DE"]}';");
                             }
                             if (row["HMI Name ES"].ToString() != "")
                             {
-                                streamWriter.WriteLine($"	\"{row["Instance Name"]}\".CONFIG.Name_ES := '{row["HMI Name ES"]}';");
+                                streamWriter.WriteLine($"	\"{row["INSTANCE NAME"]}\".CONFIG.Name_ES := '{row["HMI Name ES"]}';");
                             }
                             streamWriter.WriteLine();
                         }
@@ -300,11 +300,11 @@ namespace TiaTools_V3._0.Workers
                 //Body
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    if ((row["Address"].ToString().Contains("%Q") && !row["Address"].ToString().Contains("W")))
+                    if (row["IO-TYPE"].ToString().Contains("DQ") && !row["SKIP"].ToString().Contains("YES"))
                     {
-                        if (row["Instance Name"].ToString() != "")
+                        if (row["INSTANCE NAME"].ToString() != "")
                         {
-                            streamWriter.WriteLine($"DATA_BLOCK \"{row["Instance Name"]}\"");
+                            streamWriter.WriteLine($"DATA_BLOCK \"{row["INSTANCE NAME"]}\"");
                             streamWriter.WriteLine(@"{ S7_Optimized_Access := 'TRUE' }");
                             streamWriter.WriteLine(@"VERSION : 0.1");
                             streamWriter.WriteLine(@"NON_RETAIN");
@@ -312,7 +312,7 @@ namespace TiaTools_V3._0.Workers
                             streamWriter.WriteLine();
                             streamWriter.WriteLine(@"BEGIN");
 
-                            if (row["Safe"].ToString() == "YES")
+                            if (row["FILE SAFE"].ToString() == "F")
                             {
                                 streamWriter.WriteLine($"CONFIG.IsSafety := true;");
                             }
@@ -323,12 +323,12 @@ namespace TiaTools_V3._0.Workers
 
                             streamWriter.WriteLine($"CONFIG.OnDelay := T#0ms;");
                             streamWriter.WriteLine($"CONFIG.OFFDelay := T#0ms;");
-                            streamWriter.WriteLine($"CONFIG.Name_IT := '{row["HMI Name IT"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_EN := '{row["HMI Name EN"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_FR := '{row["HMI Name FR"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_DE := '{row["HMI Name DE"]}'");
-                            streamWriter.WriteLine($"CONFIG.Name_ES := '{row["HMI Name ES"]}'");
-                            streamWriter.WriteLine($"CONFIG.Address := '{row["Address"]}'");                            
+                            streamWriter.WriteLine($"CONFIG.Name_IT := '{row["HMI Name IT"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_EN := '{row["HMI Name EN"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_FR := '{row["HMI Name FR"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_DE := '{row["HMI Name DE"]}';");
+                            streamWriter.WriteLine($"CONFIG.Name_ES := '{row["HMI Name ES"]}';");
+                            streamWriter.WriteLine($"CONFIG.Address := '{row["ADDRESS"]}';");                            
                             streamWriter.WriteLine();
 
                             streamWriter.WriteLine(@"END_DATA_BLOCK");
