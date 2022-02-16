@@ -282,6 +282,7 @@ namespace TiaTools_V3._0.Workers
                 new XElement("DefPlot", $"False"),
                 new XElement("DefReport", $"False"), 
                 new XElement("PlotColor", $"None"),
+                new XElement("UserUnit", $"None"),
                 new XElement("VarText_IT", $"DateTime"),
                 new XElement("VarText_EN", $"DateTime"),
                 new XElement("VarText_FR", $"DateTime"),
