@@ -252,6 +252,15 @@ namespace TiaTools_V3._0.Workers
                             logVar.Add(new XElement("PlotColor", $"{row["Plot_Color"]}"));
                         }
 
+                        if (row["User_Unit"].ToString() == "NOT_ALLOWED")
+                        {
+                            logVar.Add(new XElement("UserUnit", $"None"));
+                        }
+                        else
+                        {
+                            logVar.Add(new XElement("UserUnit", $"{row["User_Unit"]}"));
+                        }
+
                         logVar.Add(new XElement("VarText_IT", $"{row["LogVar_Description_IT"].ToString().Trim()}"));
 
                         logVar.Add(new XElement("VarText_EN", $"{row["LogVar_Description_EN"].ToString().Trim()}"));
