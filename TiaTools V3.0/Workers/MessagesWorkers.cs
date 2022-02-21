@@ -192,6 +192,31 @@ namespace TiaTools_V3._0.Workers
                 {
                     if (!row["Message Text IT"].ToString().Contains("SPARE"))
                     {
+                        //Message class
+                        switch (row[$"Msg Class"].ToString())
+                        {
+                            case "NONE":
+                                streamWriter.WriteLine($"Msg.MSG[{row["Nb"]}].Config.Class := 0;");
+                                break;
+
+                            case "SAFETY":
+                                streamWriter.WriteLine($"Msg.MSG[{row["Nb"]}].Config.Class := 1;");
+                                break;
+
+                            case "PROCESS":
+                                streamWriter.WriteLine($"Msg.MSG[{row["Nb"]}].Config.Class := 2;");
+                                break;
+
+                            case "WARNING":
+                                streamWriter.WriteLine($"Msg.MSG[{row["Nb"]}].Config.Class := 3;");
+                                break;
+
+                            case "WARNING_NO_ACK":
+                                streamWriter.WriteLine($"Msg.MSG[{row["Nb"]}].Config.Class := 4;");
+                                break;
+                        }
+
+                        //Message reaction for each SM
                         for (int i = 1; i < 10; i++)
                         {
                             if (row[$"Msg Reaction SM {i}"].ToString() != "NONE")
