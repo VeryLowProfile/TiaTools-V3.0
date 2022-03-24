@@ -239,6 +239,7 @@ namespace TiaTools_V3._0.Workers
                         }
                     }
                 }
+                streamWriter.WriteLine($"END_DATA_BLOCK");
 
                 streamWriter.Close();
                 streamWriter.Dispose();

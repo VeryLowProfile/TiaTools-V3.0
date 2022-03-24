@@ -67,6 +67,10 @@ namespace TiaTools_V3._0.Workers
                     {
                         genConfig.Add(new XElement("IsVirtualKeyBoard", $"{row["Config_Value"]}"));
                     }
+                    if (row["Config"].ToString() == "SqlType")
+                    {
+                        sqlConnConfig.Add(new XElement("SqlType", $"{row["Config_Value"]}"));
+                    }
                     if (row["Config"].ToString() == "SqlServerIP")
                     {
                         sqlConnConfig.Add(new XElement("SqlServerIP", $"{row["Config_Value"]}"));
